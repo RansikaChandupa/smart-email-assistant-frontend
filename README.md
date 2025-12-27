@@ -1,16 +1,55 @@
-# React + Vite
+# AI Email Reply Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A retro terminal-themed web application that generates AI-powered email replies with customizable tones. Built with React and Material-UI, featuring a unique hacker/terminal aesthetic.
 
-Currently, two official plugins are available:
+## Screenshots
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Main Interface
+<img width="1557" height="818" alt="image" src="https://github.com/user-attachments/assets/2ea051fb-d34d-409c-9079-02ca418dfd1e" />
 
-## React Compiler
+*The main application interface with terminal theme*
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Email Input
+<img width="1511" height="813" alt="image" src="https://github.com/user-attachments/assets/6b2f6e01-353a-40a2-b045-10be4423a278" />
 
-## Expanding the ESLint configuration
+*Paste your email content and select tone*
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Generated Reply
+<img width="1572" height="857" alt="image" src="https://github.com/user-attachments/assets/228b140c-d100-4dd2-b1e3-ec2cf5d8acf6" />
+
+*AI-generated reply*
+
+### Copy Reply 
+<img width="1792" height="859" alt="image" src="https://github.com/user-attachments/assets/ffb64272-1ac9-4c15-a197-e948cec6aadb" />
+
+*You can copy the reply to clipboard*
+
+## Features
+
+- 🤖 **AI-Powered Replies**: Generate intelligent email responses using AI
+- 🎨 **Retro Terminal Theme**: Classic hacker/terminal aesthetic with green-on-black design
+- 🎭 **Multiple Tones**: Choose from Professional, Friendly, or Casual tones
+- 📋 **Copy to Clipboard**: One-click copy with visual feedback
+- ⚡ **Fast & Responsive**: Built with modern React for smooth performance
+- 🔒 **Clean UI**: Intuitive interface with loading states and error handling
+
+## Tech Stack
+- **React+Vite** - UI framework
+- **Material-UI (MUI)** - Component library
+- **Axios** - HTTP client
+- **CSS3** - Custom terminal theme styling
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+## Usage
+
+1. **Paste Email Content**: Copy and paste the email you want to reply to into the text area
+2. **Select Tone (Optional)**: Choose a tone for your reply:
+   - Professional - Formal business communication
+   - Friendly - Warm and approachable
+   - Casual - Relaxed and informal
+3. **Generate Reply**: Click the "Generate Reply" button
+4. **Copy Reply**: Once generated, click "Copy to Clipboard" to copy the reply
+5. **Use Your Reply**: Paste the generated reply into your email client
+
