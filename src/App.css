@@ -1,42 +1,227 @@
+
+body {
+  background: #0a0e0a;
+  min-height: 100vh;
+  font-family: 'Courier New', 'Consolas', monospace;
+  margin: 0;
+  padding: 0;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(ellipse at center, #0f1a0f 0%, #0a0e0a 100%);
+}
+
+/* Container styling - Terminal window */
+.MuiContainer-root {
+  background: #0d1b0d !important;
+  border: 2px solid #00ff00;
+  border-radius: 8px !important;
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.3), inset 0 0 20px rgba(0, 255, 0, 0.05) !important;
+  padding: 40px !important;
+  position: relative;
+}
+
+.MuiContainer-root::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 0, 0.03) 0px,
+    transparent 1px,
+    transparent 2px,
+    rgba(0, 255, 0, 0.03) 3px
+  );
+  pointer-events: none;
+  border-radius: 8px;
+}
+
+/* Title styling - Terminal header */
+.MuiTypography-h3 {
+  color: #00ff00 !important;
+  font-weight: 700 !important;
   text-align: center;
+  margin-bottom: 32px !important;
+  font-family: 'Courier New', monospace !important;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+  letter-spacing: 2px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Input labels */
+.MuiInputLabel-root {
+  color: #00ff00 !important;
+  font-family: 'Courier New', monospace !important;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.MuiInputLabel-root.Mui-focused {
+  color: #00ff00 !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Text field styling - Terminal input */
+.MuiTextField-root {
+  background: #000000;
+  border-radius: 4px;
 }
 
-.card {
-  padding: 2em;
+.MuiOutlinedInput-root {
+  border-radius: 4px;
+  font-family: 'Courier New', monospace !important;
+  color: #00ff00 !important;
 }
 
-.read-the-docs {
-  color: #888;
+.MuiOutlinedInput-root fieldset {
+  border-color: #00ff00 !important;
+  border-width: 1px !important;
+}
+
+.MuiOutlinedInput-root:hover fieldset {
+  border-color: #00ff00 !important;
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+.MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: #00ff00 !important;
+  border-width: 2px !important;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
+}
+
+.MuiOutlinedInput-input {
+  color: #00ff00 !important;
+}
+
+.MuiOutlinedInput-input::placeholder {
+  color: #006600 !important;
+  opacity: 1;
+}
+
+/* Select dropdown */
+.MuiSelect-root {
+  color: #00ff00 !important;
+  font-family: 'Courier New', monospace !important;
+}
+
+.MuiSelect-icon {
+  color: #00ff00 !important;
+}
+
+.MuiMenu-paper {
+  background: #000000 !important;
+  border: 1px solid #00ff00 !important;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.4) !important;
+}
+
+.MuiMenuItem-root {
+  color: #00ff00 !important;
+  font-family: 'Courier New', monospace !important;
+}
+
+.MuiMenuItem-root:hover {
+  background: rgba(0, 255, 0, 0.1) !important;
+}
+
+.MuiMenuItem-root.Mui-selected {
+  background: rgba(0, 255, 0, 0.2) !important;
+}
+
+/* Button styling - Terminal command button */
+.MuiButton-contained {
+  background: #000000 !important;
+  border: 2px solid #00ff00 !important;
+  padding: 12px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  font-size: 14px !important;
+  border-radius: 4px !important;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.4) !important;
+  transition: all 0.3s ease !important;
+  font-family: 'Courier New', monospace !important;
+  color: #00ff00 !important;
+  letter-spacing: 2px;
+}
+
+.MuiButton-contained:hover:not(:disabled) {
+  background: #00ff00 !important;
+  color: #000000 !important;
+  box-shadow: 0 0 25px rgba(0, 255, 0, 0.8) !important;
+  transform: translateY(-2px);
+}
+
+.MuiButton-contained:disabled {
+  border-color: #004400 !important;
+  color: #004400 !important;
+  opacity: 0.5;
+}
+
+.MuiButton-outlined {
+  border: 2px solid #00ff00 !important;
+  color: #00ff00 !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease !important;
+  font-family: 'Courier New', monospace !important;
+  letter-spacing: 2px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.MuiButton-outlined:hover {
+  background: #00ff00 !important;
+  color: #000000 !important;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.6) !important;
+  transform: translateY(-2px);
+}
+
+/* CircularProgress color */
+.MuiCircularProgress-root {
+  color: #00ff00 !important;
+}
+
+/* Generated reply section */
+.MuiTypography-h6 {
+  color: #00ff00 !important;
+  font-weight: 700 !important;
+  font-family: 'Courier New', monospace !important;
+  text-shadow: 0 0 5px #00ff00;
+  letter-spacing: 1px;
+}
+
+/* Error message styling */
+.MuiTypography-root[color="error"] {
+  color: #ff0000 !important;
+  text-align: center;
+  margin-top: 16px !important;
+  font-weight: 700 !important;
+  font-family: 'Courier New', monospace !important;
+  text-shadow: 0 0 10px #ff0000;
+  border: 1px solid #ff0000;
+  padding: 12px;
+  background: rgba(255, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+  border: 1px solid #00ff00;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff00;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00cc00;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
 }
