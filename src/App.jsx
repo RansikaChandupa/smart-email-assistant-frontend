@@ -2,6 +2,7 @@ import { Box, Button, CircularProgress, Container, FormControl, InputLabel, Menu
 import { useState } from 'react'
 import './App.css'
 import axios from 'axios';
+import apiClient from './config/api';
 function App() {
   
   const [emailContent, setEmailContent] = useState('');
@@ -15,7 +16,7 @@ function App() {
     setLoading(true);
     setError('');
     try{
-      const response = await axios.post("http://localhost:8080/api/email/generate",{
+      const response = await apiClient.post("/api/email/generate",{
         emailContent,
         tone
       });
